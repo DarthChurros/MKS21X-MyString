@@ -9,9 +9,11 @@ public class MyString implements
       data[i] = s.charAt(i);
     }
   }
+
   public int length() {
     return data.length;
   }
+
   public char charAt(int index) {
     try {
       return data[index];
@@ -19,4 +21,23 @@ public class MyString implements
       throw new IndexOutOfBoundsException("Invalid index for charAt");
     }
   }
+
+  public CharSequence subSequence(int start, int end) {
+    String ans = "";
+    for (int i = start; i < end; i++) {
+      ans += charAt(i);
+    }
+    return ans;
+  }
+
+  public String toString() {
+    return (String)subSequence(0,length());
+  }
+
+  /*
+  public static void main(String[] args) {
+    MyString a = new MyString("hello");
+    System.out.println(a);
+  }
+  */
 }
