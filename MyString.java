@@ -34,10 +34,7 @@ public class MyString implements
     return (String)subSequence(0,length());
   }
 
-  /*
-  public static void main(String[] args) {
-    MyString a = new MyString("hello");
-    System.out.println(a);
+  public int compareTo(CharSequence other) {
+    return 0;
   }
-  */
 }
