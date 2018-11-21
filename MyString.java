@@ -35,6 +35,11 @@ public class MyString implements
   }
 
   public int compareTo(CharSequence other) {
-    return 0;
+    for (int i = 0; i < Math.max(length(),other.length()); i++) {
+      if (charAt(i) != other.charAt(i)) {
+        return (charAt(i) - other.charAt(i));
+      }
+    }
+    return length() - other.length();
   }
 }
