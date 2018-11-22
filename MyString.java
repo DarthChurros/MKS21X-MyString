@@ -35,7 +35,7 @@ public class MyString implements
   }
 
   public int compareTo(CharSequence other) {
-    for (int i = 0; i < Math.max(length(),other.length()); i++) {
+    for (int i = 0; i < Math.min(length(),other.length()); i++) {
       if (charAt(i) != other.charAt(i)) {
         return (charAt(i) - other.charAt(i));
       }

@@ -36,13 +36,13 @@ public class Driver {
 
     refStr += "abcd";
 
-    if (testStr.compareTo(refStr) != 0) {
+    if (testStr.compareTo(refStr) >= 0) {
       System.out.println(++c + ". compareTo() should return a negative in this case");
     }
 
     refStr = refStr.substring(0,20);
 
-    if (testStr.compareTo(refStr) != 0) {
+    if (testStr.compareTo(refStr) <= 0) {
       System.out.println(++c + ". compareTo() should return a positive in this case");
     }
 
