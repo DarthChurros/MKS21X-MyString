@@ -21,5 +21,9 @@ public class Driver {
       } catch (IndexOutOfBoundsException e) {
       }
     }
+
+    if (!testStr.toString().equals(refStr)) {
+      System.out.println(++c + ". testStr converts to " + testStr + " instead of " + refStr);
+    }
   }
 }
