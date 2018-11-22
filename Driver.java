@@ -17,13 +17,17 @@ public class Driver {
           System.out.println(++c + ". charAt(" + i + ") should throw an IndexOutOfBoundsException");
         }
       } catch (ArrayIndexOutOfBoundsException e) {
-        System.out.println(++c + ". charAt should not throw an ArrayIndexOutOfBoundsException");
+        System.out.println(++c + ". charAt() should not throw an ArrayIndexOutOfBoundsException");
       } catch (IndexOutOfBoundsException e) {
       }
     }
 
     if (!testStr.toString().equals(refStr)) {
       System.out.println(++c + ". testStr converts to " + testStr + " instead of " + refStr);
+    }
+
+    if (!testStr.subSequence(1,7).equals(refStr.subSequence(1,7))) {
+      System.out.println(++c + ". subSequence(1,7) is not " + refStr.subSequence(1,7));
     }
   }
 }
