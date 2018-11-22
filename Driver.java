@@ -29,5 +29,27 @@ public class Driver {
     if (!testStr.subSequence(1,7).equals(refStr.subSequence(1,7))) {
       System.out.println(++c + ". subSequence(1,7) is not " + refStr.subSequence(1,7));
     }
+
+    if (testStr.compareTo(refStr) != 0) {
+      System.out.println(++c + ". compareTo() should return 0 in this case");
+    }
+
+    refStr += "abcd";
+
+    if (testStr.compareTo(refStr) != 0) {
+      System.out.println(++c + ". compareTo() should return a negative in this case");
+    }
+
+    refStr = refStr.substring(0,20);
+
+    if (testStr.compareTo(refStr) != 0) {
+      System.out.println(++c + ". compareTo() should return a positive in this case");
+    }
+
+    if (c == 0) {
+      System.out.println("\nYour MyString passed all the tests. Good work!");
+    } else {
+      System.out.println("\nYour MyString failed " + c + " tests. Keep trying!");
+    }
   }
 }
