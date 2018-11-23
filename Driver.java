@@ -26,7 +26,7 @@ public class Driver {
       System.out.println(++c + ". testStr converts to " + testStr + " instead of " + refStr);
     }
 
-    if (!testStr.subSequence(1,7).equals(refStr.subSequence(1,7))) {
+    if (!testStr.subSequence(1,7).toString().equals(refStr.subSequence(1,7))) {
       System.out.println(++c + ". subSequence(1,7) is not " + refStr.subSequence(1,7));
     }
 
