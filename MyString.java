@@ -77,6 +77,12 @@ public class MyString implements
       System.out.println(++c + ". subSequence(1,7) is not " + refStr.subSequence(1,7));
     }
 
+    try {
+      testStr.compareTo(null);
+      System.out.println(++c + ". compareTo(null) should throw a NullPointerException");
+    } catch (NullPointerException e) {
+    }
+
     if (testStr.compareTo(refStr) != 0) {
       System.out.println(++c + ". compareTo() should return 0 in this case");
     }
